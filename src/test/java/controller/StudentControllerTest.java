@@ -25,4 +25,14 @@ public class StudentControllerTest {
         Assertions.assertNotNull(student);
         Assertions.assertEquals(student.getId(),1);
     }
+
+
+    @Test
+    void test_findStudentByIdEq2 () {
+        studentController = new StudentController();
+        var expectedStudent = new Student(2, "B", 2);
+        var actualStudent = studentController.findByid(expectedStudent.getId());
+        Assertions.assertNotNull(actualStudent);
+        Assertions.assertEquals(expectedStudent.getId(), actualStudent.getId());
+    }
 }
