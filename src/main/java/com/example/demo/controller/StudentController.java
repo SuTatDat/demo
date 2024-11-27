@@ -2,7 +2,6 @@ package com.example.demo.controller;
 
 import com.example.demo.dao.StudentDao;
 import com.example.demo.dao.StudentDaoImpl;
-import com.example.demo.dao.StudentDaoImplStub;
 import com.example.demo.model.Student;
 
 public class StudentController {
