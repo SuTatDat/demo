@@ -6,16 +6,12 @@ import java.util.List;
 
 import static java.util.Arrays.asList;
 
-public class StudentDaoImplStub implements StudentDao {
 
-    private static final List<Student> dummyStudents = asList(
-            new Student(1, "A", 1),
-            new Student(2, "B", 2)
-    );
+public class StudentDaoImplStub implements StudentDao {
 
     @Override
     public Student findById(int id) {
-      return null;
-              //dummyStudents.stream().filter(student -> student.getId() == id).findFirst().orElse(null);
+        return new Student(1, "A", 1);
     }
+
 }
