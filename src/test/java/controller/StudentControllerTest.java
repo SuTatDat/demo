@@ -12,11 +12,9 @@ import static org.mockito.Mockito.when;
 
 public class StudentControllerTest {
 
-    private StudentController studentController;
-
     @Test
     void test_findStudentByIdEq1 () {
-        studentController = new StudentController();
+        var studentController = new StudentController();
         StudentDao mockStudentDao = Mockito.mock(StudentDao.class);
         Student mockStudent = new Student(1, "A", 1);
         when(mockStudentDao.findById(1)).thenReturn(mockStudent);
