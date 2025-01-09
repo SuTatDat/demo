@@ -1,0 +1,16 @@
+services:
+  demo:
+    image: demo:latest
+    volumes:
+      - shared:/logs/
+    ports:
+      - "8080:8080"
+  fluent-bit:
+    image: fluent/fluent-bit:latest
+    volumes:
+      - shared:/logs
+      - ./fluent-bit/fluent-bit.conf:/fluent-bit/etc/fluent-bit.conf
+    ports:
+      - "2020:2020"
+volumes:
+  shared:
